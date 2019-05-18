@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/fontiran.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+{% endblock %}
+
+{% block content %}
+    <form action="{{ information.id }}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="Etitle" class="form-control mt-1" value="{{ information.title }}">
+        <input type="text" name="Edescription" class="form-control mt-1 mb-2" value="{{ information.description }}">
+        <button type="submit" class="btn btn-info m-auto d-block">update</button>
+    </form>
+
+
+
+
+
+
+
+{% endblock %}

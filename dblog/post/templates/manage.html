@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+
+{% block title %}manage{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/fontiran.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+{% endblock %}
+
+
+{% block lists%}
+<div id="content" class="mt-5" style="width:40% ;margin:auto">{% block content %}{% endblock %}</div>
+<div class="container">
+    <div id="posts">
+        {% for post in posts %}
+            <div id="post" class="shadow-sm mb-4 pl-4 pr-4 pt-3 pb-4 border-top border-dark">
+                <form action="{{ post.id }}" method="POST">
+                    {% csrf_token %}
+                    <button class="btn-danger btn float-right">delete</button>
+                </form>
+                <a href="/manage/edit/{{ post.id }}" class="btn btn-success mr-3 float-right">edit</a>
+
+                <a class="text-dark" href="/{{ post.id }}">id : {{ post.id }} title: {{ post.title}} des: {{ post.description }}</a>
+
+                
+            </div>
+    
+            
+            
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}    
+
+
+
