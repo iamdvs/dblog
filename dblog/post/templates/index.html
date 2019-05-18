@@ -1,23 +1,35 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index page</title>
-    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/css/fontiran.css">
-    <link rel="stylesheet" href="./static/css/style.css">
-
+    {% block head %}
+        <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./static/css/fontiran.css">
+        <link rel="stylesheet" href="./static/css/style.css">
+        <title>{% block title %}{% endblock %} - دبلاگ</title>
+    {% endblock %}
 </head>
 <body>
+    <div id="content" class="mt-5" style="width:40% ;margin:auto">{% block content %}{% endblock %}</div>
+    <div class="container">
+        <div id="posts">
+            {% for post in posts %}
+                <div id="post" class="shadow-sm mb-4 pl-4 pr-4 pt-3 pb-3 border-top border-dark">
+                    <a href="{{ post.id }}"> title: {{ post.title}}</a>
+                    
+                </div>
+        
+                
+                
 
+            {% endfor %}
+        </div>
+    </div>
 
-    
-
-    <h1>صفحه ی اصلی </h1>
-
-    <button class="btn btn-success">hello btn success</button>
-    
+    <div id="footer">
+        {% block footer %}
+        {% endblock %}
+    </div>
 </body>
 </html>

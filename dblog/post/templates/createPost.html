@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block title %}create post{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/fontiran.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+{% endblock %}
+
+
+{% block content %}
+
+
+    <form action="/createpost/" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title" class="mt-3">title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="title">
+
+            <label for="description" class="mt-3">description</label>
+            <input type="text" class="form-control" name="description" id="description" placeholder="description">
+            <button type="submit" class="btn btn-success mt-3">
+                create >>
+            </button>
+            
+        </div>
+    
+    </form>
+
+
+{% endblock %}
