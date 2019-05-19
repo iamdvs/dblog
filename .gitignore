@@ -1,3 +1,5 @@
 /venv
-*.pyc
-__pycache__/
+.pyc
+/__pycache__
+/media/images
+dblog/index/migrations

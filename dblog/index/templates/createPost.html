@@ -1,0 +1,34 @@
+{% extends "base/main.html" %}
+
+{% block title %}create post{% endblock %}
+
+
+
+
+{% block content %}
+
+
+    <form action="/createpost/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }} 
+        <div class="form-group">
+            <label for="title" class="mt-3">title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="title">
+<!--  -->
+            <label for="description" class="mt-3">description</label>
+            <input type="text" class="form-control" name="description" id="description" placeholder="description">
+<!--  -->
+            <label for="image" class="mt-3">photo</label>
+            <input type="file" class="form-control" name="image" id="image" placeholder="image">
+<!--  -->
+            <button type="submit" class="btn btn-success mt-3">
+                create >>
+            </button>
+            
+        </div>
+    
+    </form>
+
+
+{% endblock %}
+
