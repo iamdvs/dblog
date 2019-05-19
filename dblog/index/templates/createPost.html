@@ -2,11 +2,7 @@
 
 {% block title %}create post{% endblock %}
 
-
-
-
 {% block content %}
-
 
     <form action="/createpost/" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
@@ -28,7 +24,6 @@
         </div>
     
     </form>
-
 
 {% endblock %}
 

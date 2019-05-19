@@ -4,34 +4,34 @@ from django.views.generic import TemplateView
 from .models import *
 from .forms import *
 
-# Create your views here.
-
+# index page 
 def index(request):
 
     posts=Post.objects.all()
 
     return render(request,'index.html',{'posts':posts})
 
+#create post
 def create_post(request):
     if request.method=='GET':   
         return render(request,'createPost.html')
 
     elif request.method=='POST':
         form=ImageForm(request.POST,request.FILES)
-
         if form.is_valid():
                 form.save()
                 return redirect('/')
     else:
         form=ImageForm()
-    return render(request,'createPost.html')                   
+    return render(request,'createPost.html')   
 
-
-
+#post full views
 def description(request,post_id):
     des = Post.objects.get(pk=post_id)
     return render(request,'detail.html',{'des':des})
 
+
+#manage for posts
 def manage(request):
     if request.method == 'GET':
         posts=Post.objects.all()
@@ -42,7 +42,7 @@ def manageDelete(request,post_id):
         Post.objects.filter(id=post_id).delete()
         return redirect('/manage/')
 
-
+#edit post 
 def editPost(request,post_id):
     if request.method == "GET":
         information=Post.objects.get(pk=post_id)
