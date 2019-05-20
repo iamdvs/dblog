@@ -20,7 +20,7 @@ def create_post(request):
         form=ImageForm(request.POST,request.FILES)
         if form.is_valid():
                 form.save()
-                return redirect('/')
+                return redirect('/blog/')
     else:
         form=ImageForm()
     return render(request,'createPost.html')   
@@ -40,7 +40,7 @@ def manage(request):
 def manageDelete(request,post_id):
     if request.method == 'POST':
         Post.objects.filter(id=post_id).delete()
-        return redirect('/manage/')
+        return redirect('/blog/manage/')
 
 #edit post 
 def editPost(request,post_id):
@@ -55,4 +55,4 @@ def editPost(request,post_id):
             mypost.description=request.POST.get('Edescription')
             mypost.save()
             
-            return redirect('/manage/')
+            return redirect('/blog/manage/')

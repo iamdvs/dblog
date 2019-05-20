@@ -20,7 +20,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'index',
+    'index.apps.IndexConfig',
+    'main.apps.MainConfig'
 ]
 
 MIDDLEWARE = [
@@ -35,10 +36,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'dblog.urls'
 
+TEMP_DIR=os.path.join(BASE_DIR,'media/templates/')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMP_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'ASIA/TEHRAN'
 
@@ -103,15 +106,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 
-STATIC_URL = '/static/'
+STATIC_URL = '/media/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    'media/static/',
 )
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
