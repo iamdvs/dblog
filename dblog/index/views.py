@@ -9,7 +9,7 @@ def index(request):
 
     posts=Post.objects.all()
 
-    return render(request,'index.html',{'posts':posts})
+    return render(request,'blog/index.html',{'posts':posts})
 
 #create post
 def create_post(request):
@@ -28,31 +28,4 @@ def create_post(request):
 #post full views
 def description(request,post_id):
     des = Post.objects.get(pk=post_id)
-    return render(request,'detail.html',{'des':des})
-
-
-#manage for posts
-def manage(request):
-    if request.method == 'GET':
-        posts=Post.objects.all()
-        return render(request,'manage.html',{'posts':posts})   
-      
-def manageDelete(request,post_id):
-    if request.method == 'POST':
-        Post.objects.filter(id=post_id).delete()
-        return redirect('/blog/manage/')
-
-#edit post 
-def editPost(request,post_id):
-    if request.method == "GET":
-        information=Post.objects.get(pk=post_id)
-        return render(request,'editPost.html',{'information':information})
-
-    elif request.method == "POST":
-            mypost=Post.objects.get(id=post_id)
-
-            mypost.title=request.POST.get('Etitle')
-            mypost.description=request.POST.get('Edescription')
-            mypost.save()
-            
-            return redirect('/blog/manage/')
+    return render(request,'blog/detail.html',{'des':des})

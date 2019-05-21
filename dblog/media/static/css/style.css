@@ -15,4 +15,27 @@ body{
 	direction: rtl;
 }
 
+.firan{
+	font-family: IRANSans !important;
+}
+
+.fs20{
+	font-size: 20px !important;
+}
+.fs15{
+	font-size: 15px !important;
+}
+.fs18{
+	font-size: 18px;
+}
+.fs13{
+	font-size: 13px;
+}
+.fs12{
+	font-size: 12px !important;
+}
+.fs14{
+	font-size: 14px;
+}
+
 

@@ -1,6 +1,9 @@
 {% extends "../base/main.html" %}
-
+{% load static %}
 {% block body %}
+
+<body id="page-top">
+
 <!--/ Nav Star /-->
 <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
   <div class="container">
@@ -26,7 +29,7 @@
           <a class="nav-link js-scroll" href="#work">کار</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll" href="#blog">بلاگ</a>
+          <a class="nav-link js-scroll" href="#blog">بلاگ<a href="/blog/"></a></a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll" href="#contact">ارتباط با من</a>
@@ -39,18 +42,18 @@
 
 
 <!--/ Intro Skew Star /-->
-<div id="home" class="intro route bg-image" style="background-image: url(/../img/iamdvs-bg.jpg)">
+<div id="home" class="intro route bg-image" style="background-image: url({% static 'img/iamdvs-bg.jpg' %})">
   <div class="overlay-itro"></div>
   <div class="intro-content display-table">
     <div class="table-cell">
       <div class="container">
 
-        <p class="display-6 color-d">Hello, world!</p>
+        <p class="display-6 color-d">سلام !</p>
         <h1 class="intro-title mb-4">I am davod vesaghati</h1>
         <p class="intro-subtitle"><span class="text-slider-items">nodejs ,python, Linux</span><strong class="text-slider"></strong></p>
 
 
-        <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p>
+        <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">about More</a></p>
       </div>
     </div>
   </div>
@@ -67,37 +70,57 @@
               <div class="row">
                 <div class="col-sm-6 col-md-5">
                   <div class="about-img">
-                    <img src="../img/iamdvs_profile.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                    <img src="{% static 'img/iamdvs_profile.jpg' %}" class="img-fluid rounded b-shadow-a" alt="">
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-7">
-                  <div class="about-info">
-                      <p><span class="title-s">Name: </span> <span>ِdavod</span></p>
-                      <p><span class="title-s">Profile: </span> <span>vesaghati</span></p>
-                      <p><span class="title-s">Email: </span> <span>programmersharp1379@gmail.com</span></p>
-                      <p><span class="title-s">Phone: </span> <span>09184862837</span></p>
+                  <div class="about-info text-right">
+                      <p><span class="title-s">نام: </span> <span>داود</span></p>
+                      <p><span class="title-s">نام خانوادگی: </span> <span>وثاقتی</span></p>
+                      <p><span class="title-s">ایمیل: </span> <span>programmersharp1379@gmail.com</span></p>
+                      <p><span class="title-s">موبایل: </span> <span>09184862837</span></p>
 
                   </div>
                 </div>
               </div>
               <div class="skill-mf">
                 <p class="title-s">مهارت ها</p>
-                <span>HTML</span> <span class="pull-right">85%</span>
+                <span>HTML</span> <span class="pull-right">100%</span>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
-                <span>CSS3</span> <span class="pull-right">75%</span>
+                <span>CSS3</span> <span class="pull-right">80%</span>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="50" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
-                <span>nodejs</span> <span class="pull-right">30%</span>
+                <span>nodejs</span> <span class="pull-right">40%</span>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0"
                     aria-valuemax="100"></div>
                 </div>
                 <span>JAVASCRIPT</span> <span class="pull-right">50%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <span>BOOTSTRAP</span> <span class="pull-right">50%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <span>PYTHON</span> <span class="pull-right">50%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <span>DJANGO/PYTHON</span> <span class="pull-right">30%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <span>LINUX</span> <span class="pull-right">40%</span>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0"
                     aria-valuemax="100"></div>
@@ -113,9 +136,10 @@
                 </div>
             
 
-                <p class="lead float-right text-right" style="margin-top:20px;">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nisi similique veritatis magnam voluptas sapiente reprehenderit praesentium, incidunt repudiandae pariatur et a magni, cupiditate tempora tenetur, eaque enim totam! Eaque.
-                </p>
+                <p class="lead float-right text-right" style="margin-top:20px;font-size:16px">
+                  من علاقه ی زیادی به برنامه نویسی, طراحی وب و همچنین شرکت درکار های گروهی و استارتاپی دارم
+                  معیار من در ادامه ی اینکار پیشرفت و یادگیری مداوم است من این را فقط به عنوان کار تلقی نمیکنم ,
+                و ان را یک جور هدف و علاقه ی فردی میدانم .                </p>
 
 
               </div>
@@ -136,10 +160,10 @@
       <div class="col-sm-12">
         <div class="title-box text-center">
           <h3 class="title-a">
-            Services
+            سرویس ها 
           </h3>
           <p class="subtitle-a">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            سرویس هایی که ارایه میشه
           </p>
           <div class="line-mf"></div>
         </div>
@@ -152,7 +176,7 @@
             <span class="ico-circle"><i class="ion-monitor"></i></span>
           </div>
           <div class="service-content">
-            <h2 class="s-title">Web Design</h2>
+            <h2 class="s-title">طراحی وب </h2>
             <p class="s-description text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
               provident vitae! Magni
@@ -167,7 +191,7 @@
             <span class="ico-circle"><i class="ion-code-working"></i></span>
           </div>
           <div class="service-content">
-            <h2 class="s-title">Web Development</h2>
+            <h2 class="s-title">توسعه ی وب</h2>
             <p class="s-description text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
               provident vitae! Magni
@@ -197,7 +221,7 @@
             <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
           </div>
           <div class="service-content">
-            <h2 class="s-title">Responsive Design</h2>
+            <h2 class="s-title">طراحی واکنشگرا</h2>
             <p class="s-description text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
               provident vitae! Magni
@@ -212,7 +236,7 @@
             <span class="ico-circle"><i class="ion-paintbrush"></i></span>
           </div>
           <div class="service-content">
-            <h2 class="s-title">Graphic Design</h2>
+            <h2 class="s-title">طراحی گرافیکی</h2>
             <p class="s-description text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
               provident vitae! Magni
@@ -241,7 +265,7 @@
 </section>
 <!--/ Section Services End /-->
 
-<div class="section-counter paralax-mf bg-image" style="background-image: url(../../img/counters-bg.jpg)">
+<!-- <div class="section-counter paralax-mf bg-image" style="background-image: url({% static 'img/counters-bg.jpg' %})">
   <div class="overlay-mf"></div>
   <div class="container">
     <div class="row">
@@ -291,7 +315,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!--/ Section Portfolio Star /-->
 <section id="work" class="portfolio-mf sect-pt4 route">
@@ -300,11 +324,10 @@
       <div class="col-sm-12">
         <div class="title-box text-center">
           <h3 class="title-a">
-            Portfolio
+            نمونه کار ها
           </h3>
           <p class="subtitle-a">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
+این بخش مختص به نمونه کار میباشد          </p>
           <div class="line-mf"></div>
         </div>
       </div>
@@ -312,9 +335,8 @@
     <div class="row">
       <div class="col-md-4">
         <div class="work-box">
-          <a src="../../img/work-1.jpg" data-lightbox="gallery-mf">
+          <a src="{% static 'img/work-2.jpg' %}" data-lightbox="gallery-mf">
             <div class="work-img">
-              <img src="../img/work-1.jpg" alt="" class="img-fluid">
             </div>
             <div class="work-content">
               <div class="row">
@@ -336,9 +358,9 @@
       </div>
       <div class="col-md-4">
         <div class="work-box">
-          <a src="../img/work-2.jpg'" data-lightbox="gallery-mf">
+          <a src="{% static 'img/work-2.jpg' %}" data-lightbox="gallery-mf">
             <div class="work-img">
-              <img src="../img/work-2.jpg" alt="" class="img-fluid">
+              <img src="{% static 'img/work-2.jpg' %}" alt="" class="img-fluid">
             </div>
             <div class="work-content">
               <div class="row">
@@ -360,9 +382,9 @@
       </div>
       <div class="col-md-4">
         <div class="work-box">
-          <a src="../img/work-3.jpg" data-lightbox="gallery-mf">
+          <a src="{% static 'img/work-3.jpg' %}" data-lightbox="gallery-mf">
             <div class="work-img">
-              <img src="../img/work-3.jpg" alt="" class="img-fluid">
+              <img src="{% static 'img/work-3.jpg' %}" alt="" class="img-fluid">
             </div>
             <div class="work-content">
               <div class="row">
@@ -384,9 +406,9 @@
       </div>
       <div class="col-md-4">
         <div class="work-box">
-          <a src="../img/work-4.jpg" data-lightbox="gallery-mf">
+          <a src="{% static 'img/work-4.jpg' %}" data-lightbox="gallery-mf">
             <div class="work-img">
-              <img src="../img/work-4.jpg" alt="" class="img-fluid">
+              <img src="{% static 'img/work-4.jpg' %}" alt="" class="img-fluid">
             </div>
             <div class="work-content">
               <div class="row">
@@ -408,9 +430,9 @@
       </div>
       <div class="col-md-4">
         <div class="work-box">
-          <a src="../img/work-5.jpg" data-lightbox="gallery-mf">
+          <a src="{% static 'img/work-5.jpg' %}" data-lightbox="gallery-mf">
             <div class="work-img">
-              <img src="../img/work-5.jpg" alt="" class="img-fluid">
+              <img src="{% static 'img/work-5.jpg' %}" alt="" class="img-fluid">
             </div>
             <div class="work-content">
               <div class="row">
@@ -432,9 +454,9 @@
       </div>
       <div class="col-md-4">
         <div class="work-box">
-          <a src="'../img/work-6.jpg" data-lightbox="gallery-mf">
+          <a src="{% static 'img/work-6.jpg' %}" data-lightbox="gallery-mf">
             <div class="work-img">
-              <img src="../img/work-6.jpg" alt="" class="img-fluid">
+              <img src="{% static 'img/work-6.jpg' %}" alt="" class="img-fluid">
             </div>
             <div class="work-content">
               <div class="row">
@@ -461,7 +483,7 @@
 <!--/ Section Portfolio End /-->
 
 <!--/ Section Testimonials Star /-->
-<div class="testimonials paralax-mf bg-image" style="background-image: url(../img/overlay-bg.jpg)">
+<!-- <div class="testimonials paralax-mf bg-image" style="background-image: url({% static 'img/overlay-bg.jpg' %})">
   <div class="overlay-mf"></div>
   <div class="container">
     <div class="row">
@@ -469,7 +491,7 @@
         <div id="testimonial-mf" class="owl-carousel owl-theme">
           <div class="testimonial-box">
             <div class="author-test">
-              <img src="../img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
+              <img src="{% static 'img/testimonial-2.jpg' %}" alt="" class="rounded-circle b-shadow-a">
               <span class="author">Xavi Alonso</span>
             </div>
             <div class="content-test">
@@ -482,7 +504,7 @@
           </div>
           <div class="testimonial-box">
             <div class="author-test">
-              <img src="../img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
+              <img src="{% static 'img/testimonial-4.jpg' %}" alt="" class="rounded-circle b-shadow-a">
               <span class="author">Marta Socrate</span>
             </div>
             <div class="content-test">
@@ -497,7 +519,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!--/ Section Blog Star /-->
 <section id="blog" class="blog-mf sect-pt4 route">
@@ -506,20 +528,21 @@
       <div class="col-sm-12">
         <div class="title-box text-center">
           <h3 class="title-a">
-            Blog
+            بلاگ
           </h3>
           <p class="subtitle-a">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            مقاله های پیشنهادی
           </p>
           <div class="line-mf"></div>
         </div>
       </div>
     </div>
     <div class="row">
+    {% for post in post %}   
       <div class="col-md-4">
         <div class="card card-blog">
           <div class="card-img">
-            <a src="blog-single.html"><img src="../img/post-1.jpg" alt="" class="img-fluid"></a>
+            <a src="blog-single.html"><img src="{% static 'img/post-1.jpg' %}" alt="" class="img-fluid"></a>
           </div>
           <div class="card-body">
             <div class="card-category-box">
@@ -527,7 +550,7 @@
                 <h6 class="category">Travel</h6>
               </div>
             </div>
-            <h3 class="card-title"><a src="blog-single.html">See more ideas about Travel</a></h3>
+            <h3 class="card-title"><a src="blog-single.html">{{ post.title }}</a></h3>
             <p class="card-description">
               Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
               a pellentesque nec,
@@ -537,78 +560,20 @@
           <div class="card-footer">
             <div class="post-author">
               <a href="#">
-                <img src="static/img/testimonial-.jpg" alt="" class="avatar rounded-circle">
-                <span class="author">Morgan Freeman</span>
+                <img src="{% static 'img/testimonial-2.jpg' %}" alt="" class="avatar rounded-circle">
+                <span class="author">داود وثاقتی</span>
               </a>
             </div>
             <div class="post-date">
-              <span class="ion-ios-clock-outline"></span> 10 min
+              <span class="ion-ios-clock-outline"></span> 10 دقیقه
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card card-blog">
-          <div class="card-img">
-            <a href="blog-single.html"><img src="../img/post-2.jpg" alt="" class="img-fluid"></a>
-          </div>
-          <div class="card-body">
-            <div class="card-category-box">
-              <div class="card-category">
-                <h6 class="category">Web Design</h6>
-              </div>
-            </div>
-            <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-            <p class="card-description">
-              Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-              a pellentesque nec,
-              egestas non nisi.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="post-author">
-              <a href="#">
-                <img src="../img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                <span class="author">Morgan Freeman</span>
-              </a>
-            </div>
-            <div class="post-date">
-              <span class="ion-ios-clock-outline"></span> 10 min
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card card-blog">
-          <div class="card-img">
-            <a href="blog-single.html"><img src="../img/post-3.jpg" alt="" class="img-fluid"></a>
-          </div>
-          <div class="card-body">
-            <div class="card-category-box">
-              <div class="card-category">
-                <h6 class="category">Web Design</h6>
-              </div>
-            </div>
-            <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-            <p class="card-description">
-              Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-              a pellentesque nec,
-              egestas non nisi.
-            </p>
-          </div>
-          <div class="card-footer">
-            <div class="post-author">
-              <a href="#">
-                <img src="../img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                <span class="author">Morgan Freeman</span>
-              </a>
-            </div>
-            <div class="post-date">
-              <span class="ion-ios-clock-outline"></span> 10 min
-            </div>
-          </div>
-        </div>
-      </div>
+
+     {% endfor %} 
+     
+
     </div>
   </div>
 </section>
@@ -625,8 +590,8 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="title-box-2">
-                  <h5 class="title-left">
-                    Send Message Us
+                  <h5 class="title-left text-right">
+                    ارسال پیام با 
                   </h5>
                 </div>
                 <div>
@@ -636,30 +601,30 @@
                     <div class="row">
                       <div class="col-md-12 mb-3">
                         <div class="form-group">
-                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                          <input type="text" name="name" class="form-control" id="name" placeholder="نام" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                           <div class="validation"></div>
                         </div>
                       </div>
                       <div class="col-md-12 mb-3">
                         <div class="form-group">
-                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                          <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل" data-rule="email" data-msg="Please enter a valid email" />
                           <div class="validation"></div>
                         </div>
                       </div>
                       <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                             <div class="validation"></div>
                           </div>
                       </div>
                       <div class="col-md-12 mb-3">
                         <div class="form-group">
-                          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="پیام"></textarea>
                           <div class="validation"></div>
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                        <button type="submit" class="button button-a button-big button-rouded">ارسال پیام</button>
                       </div>
                     </div>
                   </form>
@@ -667,8 +632,8 @@
               </div>
               <div class="col-md-6">
                 <div class="title-box-2 pt-4 pt-md-0">
-                  <h5 class="title-left">
-                    Get in Touch
+                  <h5 class="title-left text-right">
+                    تماس با من 
                   </h5>
                 </div>
                 <div class="more-info">
@@ -681,13 +646,13 @@
                   <ul class="list-ico">
                     <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
                     <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                    <li><span class="ion-email"></span> contact@example.com</li>
+                    <li><span class="ion-email"></span> programmersharp1379@gmail.com</li>
                   </ul>
                 </div>
                 <div class="socials">
                   <ul>
                     <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                    <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                    <li><a href="https://www.instagram.com/davod_vesaghati"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
                     <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
                     <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
                   </ul>
@@ -702,3 +667,30 @@
 
 
 {% endblock %}
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="copyright-box">
+          <p class="copyright">&copy; Copyright <strong>iamdvs</strong>. All Rights Reserved</p>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+            -->
+            Designed by <a href="https://www.instagram.com/davod_vesaghati">davod vesaghati</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+<!--/ Section Contact-footer End /-->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<div id="preloader"></div>
